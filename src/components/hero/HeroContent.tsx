@@ -32,17 +32,19 @@ export default function HeroContent() {
 
       {/* Buttons */}
       <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto items-center mb-6">
-        <a href="#projects" className="w-full md:w-auto">
-          <button className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 min-h-[48px] rounded-xl font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all w-full md:w-auto">
-            View Project
-            <ArrowRight size={20} />
-          </button>
+        <a
+          href="#projects"
+          className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 min-h-[48px] rounded-xl font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all w-full md:w-auto"
+        >
+          View Project
+          <ArrowRight size={20} />
         </a>
-        <ExternalLink href={getGmailHref()} className="w-full md:w-auto">
-          <button className="flex items-center justify-center gap-2 bg-white text-black border border-black px-6 py-3 min-h-[48px] rounded-xl font-medium hover:bg-gray-100 transition-colors w-full md:w-auto">
-            Contact Me
-            <Mail size={20} />
-          </button>
+        <ExternalLink
+          href={getGmailHref()}
+          className="flex items-center justify-center gap-2 bg-white text-black border border-black px-6 py-3 min-h-[48px] rounded-xl font-medium hover:bg-gray-100 transition-colors w-full md:w-auto"
+        >
+          Contact Me
+          <Mail size={20} />
         </ExternalLink>
       </div>
 
