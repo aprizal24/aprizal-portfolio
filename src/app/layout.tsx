@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: siteConfig.metadataBase,
   title: {
     template: `%s | ${siteConfig.name}`,
     default: `${siteConfig.name} - ${siteConfig.role}`,
@@ -22,29 +23,12 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
   creator: siteConfig.creator,
-  publisher: siteConfig.publisher,
-  category: siteConfig.category,
-  applicationName: siteConfig.applicationName,
-  metadataBase: siteConfig.metadataBase,
   alternates: {
     canonical: siteConfig.metadataBase.toString(),
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  referrer: "origin-when-cross-origin",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
   },
   openGraph: {
     title: `${siteConfig.name} - ${siteConfig.role}`,
@@ -55,10 +39,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: siteConfig.ogImage,
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - ${siteConfig.role} Portfolio`,
+        alt: "Aprizal Triansyah Portfolio",
       },
     ],
   },
@@ -66,25 +50,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} - ${siteConfig.role}`,
     description: siteConfig.description,
-    images: [siteConfig.twitterImage],
-    creator: "@byaprizal", // TODO: Replace with your Twitter handle
-    creatorId: "", // TODO: Replace with your Twitter numeric ID (optional)
+    images: ["/og-image.png"],
   },
-  icons: {
-    icon: [
-      { rel: "icon", url: "/favicon.ico" },
-      { rel: "icon", url: "/icon.png", type: "image/png" },
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: [
-      { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
-    ],
-  },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
-  colorScheme: "light",
 };
 
 export default function RootLayout({

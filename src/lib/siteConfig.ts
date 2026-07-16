@@ -30,10 +30,6 @@ export const siteConfig = {
   metadataBase: new URL("https://aprizal-portfolio.vercel.app/"),
 
   // Social Preview Images
-  // TODO: Add your social preview images to public/ directory
-  // Recommended sizes:
-  // - Open Graph: 1200x630px
-  // - Twitter: 1200x630px (same as OG)
   ogImage: "/og-image.png",
   twitterImage: "/og-image.png",
 
