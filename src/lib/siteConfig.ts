@@ -27,7 +27,7 @@ export const siteConfig = {
   applicationName: "Aprizal Triansyah Portfolio",
 
   // TODO: Replace with your actual custom domain
-  metadataBase: new URL("https://personal-portfolio-psi-ten-55.vercel.app"),
+  metadataBase: new URL("https://aprizal-portfolio.vercel.app/"),
 
   // Social Preview Images
   // TODO: Add your social preview images to public/ directory
