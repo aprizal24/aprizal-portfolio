@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { siteConfig } from "@/lib/siteConfig";
 import "./globals.css";
@@ -92,13 +93,17 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <script
+      <body className="min-h-full flex flex-col">
+        <Script
+          id="structured-data"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
         />
-      </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+        {children}
+      </body>
     </html>
   );
 }

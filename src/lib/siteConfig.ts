@@ -27,7 +27,7 @@ export const siteConfig = {
   applicationName: "Aprizal Triansyah Portfolio",
 
   // TODO: Replace with your actual custom domain
-  metadataBase: new URL("https://aprizal-portfolio.vercel.app/"),
+  metadataBase: new URL("https://aprizal-portfolio.vercel.app"),
 
   // Social Preview Images
   ogImage: "/og-image.png",
@@ -45,8 +45,8 @@ export const siteConfig = {
   },
 
   projects: {
-    snapHire: "https://snaphire-case-study.vercel.app/",
-    klyra: "https://klyra-case-study.vercel.app/",
+    snapHire: "https://snaphire-case-study.vercel.app",
+    klyra: "https://klyra-case-study.vercel.app",
   },
 
   contact: {
