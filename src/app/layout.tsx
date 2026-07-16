@@ -31,6 +31,20 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: "/brand/logo-flat-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/brand/logo-flat-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "icon", url: "/brand/logo-flat-16.png", sizes: "16x16", type: "image/png" },
+      { rel: "icon", url: "/brand/logo-flat-32.png", sizes: "32x32", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: `${siteConfig.name} - ${siteConfig.role}`,
     description: siteConfig.description,
