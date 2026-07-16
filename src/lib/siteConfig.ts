@@ -32,6 +32,7 @@ export const siteConfig = {
   // Social Preview Images
   ogImage: "/og-image.png",
   twitterImage: "/og-image.png",
+  profileImage: "/images/profile/profile.png",
 
   // Social & Contact
   email: EMAIL,

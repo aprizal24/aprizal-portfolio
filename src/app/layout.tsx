@@ -59,11 +59,45 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteConfig.name,
+    jobTitle: siteConfig.role,
+    description: siteConfig.description,
+    url: siteConfig.metadataBase.toString(),
+    image: `${siteConfig.metadataBase.toString()}${siteConfig.profileImage}`,
+    email: `mailto:${siteConfig.email}`,
+    sameAs: [
+      siteConfig.social.linkedin,
+      siteConfig.social.instagram,
+      ...(siteConfig.social.github ? [siteConfig.social.github] : []),
+      ...(siteConfig.social.behance ? [siteConfig.social.behance] : []),
+    ].filter(Boolean) as string[],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.applicationName,
+    url: siteConfig.metadataBase.toString(),
+    description: siteConfig.description,
+    author: personSchema,
+  };
+
+  const jsonLd = [personSchema, websiteSchema];
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
