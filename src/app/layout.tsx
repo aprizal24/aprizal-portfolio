@@ -55,10 +55,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteConfig.metadataBase.toString()}og-image.png`, // TODO: Add your Open Graph image
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} Portfolio`,
+        alt: `${siteConfig.name} - ${siteConfig.role} Portfolio`,
       },
     ],
   },
@@ -66,8 +66,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} - ${siteConfig.role}`,
     description: siteConfig.description,
-    images: [`${siteConfig.metadataBase.toString()}og-image.png`], // TODO: Add your Twitter image
-    creator: siteConfig.creator,
+    images: [siteConfig.twitterImage],
+    creator: "@byaprizal", // TODO: Replace with your Twitter handle
+    creatorId: "", // TODO: Replace with your Twitter numeric ID (optional)
   },
   icons: {
     icon: [
