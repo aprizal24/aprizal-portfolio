@@ -16,7 +16,7 @@ export default function ContactCard({
 }: ContactCardProps) {
   const Content = (
     <div className="flex items-start gap-6 p-6 md:p-8 bg-white rounded-[28px] shadow-xl border border-neutral-100 transition-all duration-300 hover:-translate-y-1.5">
-      <div className="mt-1">{icon}</div>
+      <div className="mt-1" aria-hidden="true">{icon}</div>
       <div className="flex flex-col gap-1">
         <h3 className="text-sm font-medium tracking-wider uppercase text-neutral-500">
           {title}

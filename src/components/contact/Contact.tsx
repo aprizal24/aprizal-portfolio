@@ -8,7 +8,7 @@ import Container from "@/components/layout/Container";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-white py-16 md:py-20 lg:py-28">
+    <section id="contact" aria-labelledby="contact-heading" className="bg-white py-16 md:py-20 lg:py-28">
       <Container>
         <div className="w-full">
           {/* Contact Layout */}
@@ -21,7 +21,7 @@ export default function Contact() {
                   Contact
                 </span>
               </div>
-              <h2 className="mt-4 md:mt-15 text-2xl md:text-3xl font-bold">
+              <h2 id="contact-heading" className="mt-4 md:mt-15 text-2xl md:text-3xl font-bold">
                 Let&apos;s build something meaningful together.
               </h2>
               <p className="mt-4 md:mt-5 text-xl md:text-2xl lg:text-4xl leading-8 md:leading-15 lg:leading-20 text-neutral-800">
@@ -72,7 +72,7 @@ export default function Contact() {
           </div>
 
           {/* Footer */}
-          <div className="mt-20 md:mt-30">
+          <footer className="mt-20 md:mt-30">
             <div className="grid grid-cols-1 gap-12 md:gap-16 mb-12 md:mb-16">
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold">APRIZAL TRIANSYAH</h3>
@@ -86,25 +86,28 @@ export default function Contact() {
                   Currently open to UI/UX Designer roles, freelance projects, and creative collaborations. Available for on-site, hybrid, or remote work.
                 </p>
                 <div className="mt-5 flex gap-4 justify-center md:justify-start">
-                  <ExternalLink
-                    href={siteConfig.social.linkedin}
-                    className="w-12 h-12 flex items-center justify-center border border-neutral-200 rounded-full text-neutral-800 hover:bg-black hover:text-white transition-all"
-                  >
-                    <FaLinkedinIn size={20} />
-                  </ExternalLink>
-                  <ExternalLink
-                    href={getGmailHref()}
-                    className="w-12 h-12 flex items-center justify-center border border-neutral-200 rounded-full text-neutral-800 hover:bg-black hover:text-white transition-all"
-                  >
-                    <Mail size={20} />
-                  </ExternalLink>
-                  <ExternalLink
-                    href={siteConfig.social.instagram}
-                    className="w-12 h-12 flex items-center justify-center border border-neutral-200 rounded-full text-neutral-800 hover:bg-black hover:text-white transition-all"
-                  >
-                    <FaInstagram size={20} />
-                  </ExternalLink>
-                </div>
+          <ExternalLink
+            href={siteConfig.social.linkedin}
+            className="w-12 h-12 flex items-center justify-center border border-neutral-200 rounded-full text-neutral-800 hover:bg-black hover:text-white transition-all"
+            aria-label="Visit Aprizal Triansyah's LinkedIn profile"
+          >
+            <FaLinkedinIn size={20} aria-hidden="true" />
+          </ExternalLink>
+          <ExternalLink
+            href={getGmailHref()}
+            className="w-12 h-12 flex items-center justify-center border border-neutral-200 rounded-full text-neutral-800 hover:bg-black hover:text-white transition-all"
+            aria-label="Send email to Aprizal Triansyah"
+          >
+            <Mail size={20} aria-hidden="true" />
+          </ExternalLink>
+          <ExternalLink
+            href={siteConfig.social.instagram}
+            className="w-12 h-12 flex items-center justify-center border border-neutral-200 rounded-full text-neutral-800 hover:bg-black hover:text-white transition-all"
+            aria-label="Visit Aprizal Triansyah's Instagram profile"
+          >
+            <FaInstagram size={20} aria-hidden="true" />
+          </ExternalLink>
+        </div>
               </div>
             </div>
 
@@ -115,7 +118,7 @@ export default function Contact() {
                 Designed with Figma • Developed with Next.js
               </p>
             </div>
-          </div>
+          </footer>
         </div>
       </Container>
     </section>

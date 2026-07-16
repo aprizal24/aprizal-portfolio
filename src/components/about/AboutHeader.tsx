@@ -7,7 +7,7 @@ export default function AboutHeader() {
           About Me
         </span>
       </div>
-      <h2 className="mt-2 md:mt-12 text-xl md:text-4xl font-semibold">A little about me.</h2>
+      <h2 id="about-heading" className="mt-2 md:mt-12 text-xl md:text-4xl font-semibold">A little about me.</h2>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Container from "@/components/layout/Container";
 
 export default function About() {
   return (
-    <section id="about" className="bg-[#F8FAFF] py-16 md:py-20 lg:py-28">
+    <section id="about" aria-labelledby="about-heading" className="bg-[#F8FAFF] py-16 md:py-20 lg:py-28">
       <Container>
         <div className="w-full">
           <AboutHeader />
@@ -15,7 +15,7 @@ export default function About() {
                 Hi, I&apos;m Aprizal Triansyah, a UI/UX Designer based in Lombok, Indonesia. I enjoy designing simple, intuitive, and thoughtful digital experiences that solve real user problems.
               </p>
               <p className="mt-4 md:mt-5 text-base md:text-lg leading-7 md:leading-10 text-neutral-800">
-                My journey into design started with a curiosity about how thoughtful interfaces can simplify everyday interactions. Through personal projects, I&apos;ve been developing my skills in user experience, interface design, and design systems while continuously learning and refining my design process.
+                My journey into design started with a curiosity about how thoughtful interfaces can simplify everyday interactions. Through personal projects, I've been developing my skills in user experience, interface design, and design systems while continuously learning and refining my design process.
               </p>
               <p className="mt-4 md:mt-5 text-base md:text-lg leading-7 md:leading-10 text-neutral-800">
                 I believe great design is not only visually appealing but also functional, accessible, and built around real user needs.

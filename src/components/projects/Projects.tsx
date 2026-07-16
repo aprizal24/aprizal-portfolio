@@ -4,7 +4,7 @@ import Container from "@/components/layout/Container";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-white py-16 md:py-20 lg:py-28">
+    <section id="projects" aria-labelledby="projects-heading" className="bg-white py-16 md:py-20 lg:py-28">
       <Container>
         <div className="w-full">
           {/* Section Header */}
@@ -15,7 +15,7 @@ export default function Projects() {
                 Featured Projects
               </span>
             </div>
-            <h2 className="mt-4 md:mt-5 lg:mt-10 text-xl md:text-4xl font-medium">
+            <h2 id="projects-heading" className="mt-4 md:mt-5 lg:mt-10 text-xl md:text-4xl font-medium">
               Selected work that reflects my design thinking and problem-solving approach.
             </h2>
           </div>

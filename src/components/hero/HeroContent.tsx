@@ -37,14 +37,14 @@ export default function HeroContent() {
           className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 min-h-[48px] rounded-xl font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all w-full md:w-auto"
         >
           View Project
-          <ArrowRight size={20} />
+          <ArrowRight size={20} aria-hidden="true" />
         </a>
         <ExternalLink
           href={getGmailHref()}
           className="flex items-center justify-center gap-2 bg-white text-black border border-black px-6 py-3 min-h-[48px] rounded-xl font-medium hover:bg-gray-100 transition-colors w-full md:w-auto"
         >
           Contact Me
-          <Mail size={20} />
+          <Mail size={20} aria-hidden="true" />
         </ExternalLink>
       </div>
 
@@ -53,16 +53,16 @@ export default function HeroContent() {
         <ExternalLink
           href={siteConfig.social.linkedin}
           className="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-lg text-gray-800 hover:bg-black hover:text-white transition-colors"
-          aria-label="LinkedIn"
+          aria-label="Visit Aprizal Triansyah's LinkedIn profile"
         >
-          <FaLinkedinIn size={20} />
+          <FaLinkedinIn size={20} aria-hidden="true" />
         </ExternalLink>
         <ExternalLink
           href={siteConfig.social.instagram}
           className="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-lg text-gray-800 hover:bg-black hover:text-white transition-colors"
-          aria-label="Instagram"
+          aria-label="Visit Aprizal Triansyah's Instagram profile"
         >
-          <FaInstagram size={20} />
+          <FaInstagram size={20} aria-hidden="true" />
         </ExternalLink>
       </div>
     </div>

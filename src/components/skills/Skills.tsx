@@ -4,7 +4,7 @@ import Container from "@/components/layout/Container";
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#F8FAFF] py-16 md:py-20 lg:py-28">
+    <section id="skills" aria-labelledby="skills-heading" className="bg-[#F8FAFF] py-16 md:py-20 lg:py-28">
       <Container>
         <div className="w-full">
           {/* Section Header */}
@@ -15,7 +15,7 @@ export default function Skills() {
                 Design Expertise
               </span>
             </div>
-            <h2 className="mt-4 md:mt-5 lg:mt-10 text-xl md:text-4xl font-medium">
+            <h2 id="skills-heading" className="mt-4 md:mt-5 lg:mt-10 text-xl md:text-4xl font-medium">
               The expertise and tools behind every digital experience I create.
             </h2>
           </div>

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main aria-label="Main content">
         <Hero />
         <About />
         <Projects />
